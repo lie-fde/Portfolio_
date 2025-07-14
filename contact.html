@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Details</title>
+</head>
+<body>
+
+<h2>Submitted Details:</h2>
+
+<p><strong>Name:</strong> <span id="showName"></span></p>
+<p><strong>Email:</strong> <span id="showEmail"></span></p>
+<p><strong>Phone:</strong> <span id="showPhone"></span></p>
+<p><strong>Message:</strong> <span id="showMessage"></span></p>
+
+<script>
+function getQueryParam(param) {
+    let params = new URLSearchParams(window.location.search);
+    return params.get(param);
+}
+
+document.getElementById("showName").innerText = getQueryParam("name");
+document.getElementById("showEmail").innerText = getQueryParam("email");
+document.getElementById("showPhone").innerText = getQueryParam("phone");
+document.getElementById("showMessage").innerText = getQueryParam("message");
+</script>
+
+<a href="/Portfolio_/index.html" class="nav__link active" id="home-link">Home</a>
+
+
+</body>
+</html>
